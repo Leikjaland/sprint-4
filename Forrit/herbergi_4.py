@@ -36,7 +36,7 @@ class Herbergi_4():
     def lokaherbergi(self,leikmadur):
         #print('herb4-test#3')
         n = random.randint(1, 99)
-        print(n)
+        #print(n)
         #print("Haraldur Pottur, Hans, Greta, Sigmundur David, Gylfi Sig landslidsmadur")
         leikmadur = int(input("Veldu 1 fyrir Harald, 2 fyrir Hans, 3 fyrir Grétu, 4 fyrir Simma D og 5 fyrir Gylfa "))
         if leikmadur == 1:
