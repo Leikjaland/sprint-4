@@ -4,7 +4,7 @@ from graphics import *
 import pygame
 import sys
 import time
-
+done=False
 leikmadur = 0
 class Herbergi_4():
     #print('herb4-test#1')
@@ -36,7 +36,7 @@ class Herbergi_4():
     def lokaherbergi(self,leikmadur):
         #print('herb4-test#3')
         n = random.randint(1, 99)
-        #print(n)
+        print(n)
         #print("Haraldur Pottur, Hans, Greta, Sigmundur David, Gylfi Sig landslidsmadur")
         leikmadur = int(input("Veldu 1 fyrir Harald, 2 fyrir Hans, 3 fyrir Grétu, 4 fyrir Simma D og 5 fyrir Gylfa "))
         if leikmadur == 1:
@@ -54,6 +54,7 @@ class Herbergi_4():
             self.lokaherbergi(leikmadur)
         guess = int(input("Reyndu að giska á töluna. Veldu tölu a milli 1 og 99: "))
         while n != "guess":
+            #print(done)
             if guess < n:
                 print("Þessi tala er of lág. Reyndu aftur: ")
                 guess = int(input("Veldu tölu a milli 1 og 99: "))
@@ -62,7 +63,10 @@ class Herbergi_4():
                 guess = int(input("Veldu tölu a milli 1 og 99: "))
             else:
                 print("Allt rétt meistari!")
-                self.hljod()
+                done=self.hljod()
+                if done==True:
+                    break
+
 
     def hljod(self):
         pygame.init()
@@ -110,16 +114,15 @@ class Herbergi_4():
                     done = True
 
         pygame.quit()
-
+        return done
     def endir(self):
         print('Leikurinn er búinn.')
 
 def  main():
     loka = Herbergi_4(leikmadur)
     loka.mynd_3(leikmadur)
-    loka.lokaherbergi(leikmadur)
-    loka.hljod()
     loka.endir()
+
 
 if __name__  == '__main__':
     main()
