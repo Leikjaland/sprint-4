@@ -81,7 +81,7 @@ class leikjaland(object):
 # Ef ekki er valið skólaföt eða útiföt
         else:
             print ('Þú hefur ekki valið föt')
-            self.Herbergi_1(bok,blom)
+            self.Herbergi_1(bok,blom,herb2,herb3,herb4)
 
 
 # Fallið leyfir leikmanni að koma til baka og skipta um föt til að fara í hitt herbergið
